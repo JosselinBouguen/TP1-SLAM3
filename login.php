@@ -30,7 +30,7 @@ session_start();
                     $mdp=$_POST["password"];
                 }
                 try {
-                    $dbh = new PDO('mysql:host=localhost;dbname=slam3-tp1','root', '');
+                    $dbh = new PDO('mysql:host=localhost;dbname=slam-jb','root', '');
                     foreach($dbh->query('SELECT login,mdp from user') as $row) {
                           if(isset($_POST["username"]) && isset($_POST["password"])){  
                             if($row['login']==$usr && $row['mdp']==$mdp){
